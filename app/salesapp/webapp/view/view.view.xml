@@ -1,0 +1,118 @@
+<mvc:View
+    controllerName="salesapp.controller.view"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns:f="sap.f"
+    xmlns="sap.m"
+>
+    <f:DynamicPage
+        id="dynamicPageId"
+        headerExpanded="{/headerExpanded}"
+        toggleHeaderOnTitleClick="{/titleClickable}"
+    >
+        <!-- DynamicPage Title -->
+        <f:title>
+            <f:DynamicPageTitle id="_IDGenDynamicPageTitle1">
+                <f:heading>
+                    <Title
+                        id="_IDGenTitle1"
+                        text="Header Title"
+                    />
+                </f:heading>
+                <f:expandedContent>
+                    <Label
+                        id="_IDGenLabel7"
+                        text="This is a subheading"
+                    />
+                </f:expandedContent>
+                <f:snappedContent>
+                    <Label
+                        id="_IDGenLabel8"
+                        text="This is a subheading"
+                    />
+                </f:snappedContent>
+                <f:snappedTitleOnMobile>
+                    <Title
+                        id="_IDGenTitle2"
+                        text="This is a subheading"
+                    />
+                </f:snappedTitleOnMobile>
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:content>
+            <Table
+                id="_IDGenTable1"
+                items="{/SalesOrders}"
+            >
+                <columns>
+                    <Column id="_IDGenColumn1">
+                        <Label
+                            id="_IDGenLabel1"
+                            text="Sales Order Number"
+                        />
+                    </Column>
+                    <Column id="_IDGenColumn2">
+                        <Label
+                            id="_IDGenLabel2"
+                            text="Customer Name"
+                        />
+                    </Column>
+                    <Column id="_IDGenColumn3">
+                        <Label
+                            id="_IDGenLabel3"
+                            text="Customer Number"
+                        />
+                    </Column>
+                    <Column id="_IDGenColumn4">
+                        <Label
+                            id="_IDGenLabel4"
+                            text="PO Number"
+                        />
+                    </Column>
+                    <Column id="_IDGenColumn5">
+                        <Label
+                            id="_IDGenLabel5"
+                            text="Inquiry Number"
+                        />
+                    </Column>
+                    <Column id="_IDGenColumn6">
+                        <Label
+                            id="_IDGenLabel6"
+                            text="Order Date"
+                        />
+                    </Column>
+                </columns>
+                <ColumnListItem id="_IDGenColumnListItem1">
+                    <cells>
+                        <Text
+                            id="_IDGenText1"
+                            text="{soNumber}"
+                        />
+                        <Text
+                            id="_IDGenText2"
+                            text="{customerName}"
+                        />
+                        <Text
+                            id="_IDGenText3"
+                            text="{customerNumber}"
+                        />
+                        <Text
+                            id="_IDGenText4"
+                            text="{PoNumber}"
+                        />
+                        <Text
+                            id="_IDGenText5"
+                            text="{inquiryNumber}"
+                        />
+                        <Text
+                            id="_IDGenText6"
+                            text="{orderDate}"
+                        />
+                    </cells>
+                </ColumnListItem>
+            </Table>
+        </f:content>
+        <!-- DynamicPage Footer -->
+        <f:footer />
+    </f:DynamicPage>
+</mvc:View>
